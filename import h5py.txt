@@ -1,0 +1,15 @@
+import h5py
+
+# Open the HDF5 file in read mode
+with h5py.File('
+               E:\final\final\saved_models\Emotion_Voice_Detection_Model.h5', 'r') as f:
+    # List all groups and datasets in the file
+    print("Groups and datasets in HDF5 file:")
+    for name in f:
+        print(name)
+
+    # Access a specific dataset
+    dataset = f['your_dataset_name']
+    # Read data from the dataset
+    data = dataset[:]
+    # Perform further operations on the data as needed
